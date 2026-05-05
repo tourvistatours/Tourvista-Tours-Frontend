@@ -11,6 +11,7 @@ interface ActionButtonProps {
   type?: 'button' | 'submit';
   variant?: 'default' | 'secondary' | 'outline' | 'danger' | 'success';
   className?: string;
+  form?: string;
   disabled?: boolean;
 }
 
@@ -21,6 +22,7 @@ export function ActionButton({
   type = 'button',
   variant = 'default',
   className,
+  form,
   disabled,
 }: ActionButtonProps) {
   const variantStyles = {
@@ -60,6 +62,7 @@ export function ActionButton({
       type={type}
       disabled={disabled}
       onClick={onClick}
+      form={form}
       className={cn(
         'group relative h-11 w-full overflow-hidden rounded-xl px-6 transition-all cursor-pointer duration-300',
         'font-black text-[10px] uppercase tracking-[0.2em] antialiased',

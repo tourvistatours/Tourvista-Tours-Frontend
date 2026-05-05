@@ -376,7 +376,6 @@ export default function TourModal({ isOpen, onClose, onSuccess, tour }: Props) {
           </div>
 
           {/* FOOTER */}
-
           <DialogFooter className="sticky bottom-0 bg-white dark:bg-slate-900 py-4 px-8 border-t border-slate-100 dark:border-slate-800 flex flex-row items-center gap-3">
             <Button
               type="button"

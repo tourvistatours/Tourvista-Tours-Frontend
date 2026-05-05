@@ -1,7 +1,7 @@
 import { BookingStatus } from '@/common/enums/booking-status.enum';
 import { PaymentType } from '@/common/enums/payment-type.enum';
 
-export type Reservation = {
+export interface Reservation {
   id: number;
   tourId: number;
   arrivalDate: string;
@@ -22,9 +22,9 @@ export type Reservation = {
     minGuests: number;
     maxGuests: number;
   };
-};
+}
 
-export type ReservationResponse = {
+export interface ReservationResponse {
   success: boolean;
   data: {
     data: Reservation[];
@@ -36,9 +36,9 @@ export type ReservationResponse = {
     };
   };
   message?: string;
-};
+}
 
-export type ReservationFilters = {
+export interface ReservationFilters {
   page: number;
   limit: number;
-};
+}

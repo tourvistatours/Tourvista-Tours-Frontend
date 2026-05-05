@@ -161,20 +161,18 @@ export function ReservationList() {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 p-2 rounded-[2.5rem] border border-slate-200/60 dark:border-slate-800/60 shadow-xl shadow-blue-500/[0.03]">
-          <Pagination
-            page={filters.page}
-            limit={filters.limit}
-            limits={[12, 24, 48]}
-            total={meta.total}
-            totalPages={meta.totalPages}
-            onPageChange={(p) => setFilter('page', p)}
-            onLimitChange={(l) => {
-              setFilter('limit', l);
-              setFilter('page', 1);
-            }}
-          />
-        </div>
+        <Pagination
+          page={filters.page}
+          limit={filters.limit}
+          limits={[12, 24, 48]}
+          total={meta.total}
+          totalPages={meta.totalPages}
+          onPageChange={(p) => setFilter('page', p)}
+          onLimitChange={(l) => {
+            setFilter('limit', l);
+            setFilter('page', 1);
+          }}
+        />
       </footer>
 
       {/* MODAL 1: PAYMENT */}
