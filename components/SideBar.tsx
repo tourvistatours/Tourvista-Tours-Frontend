@@ -17,6 +17,7 @@ import {
   MapPin,
   Palmtree,
   MapPinned,
+  Star,
 } from 'lucide-react';
 
 import { UserRole } from '@/common/enums/role.enum';
@@ -201,7 +202,7 @@ const adminNav = [
     items: [
       {
         label: 'System Overview',
-        href: '/dashboard/admin',
+        href: '/dashboard/admin/analytics/overview',
         icon: LayoutDashboard,
       },
     ],
@@ -211,33 +212,37 @@ const adminNav = [
     items: [
       {
         label: 'Attractions',
-        href: '/dashboard/admin/contact-center/attractions',
+        href: '/dashboard/admin/content-manager/attractions',
         icon: MapPin,
       },
       {
         label: 'Culture',
-        href: '/dashboard/admin/contact-center/culture',
+        href: '/dashboard/admin/content-manager/culture',
         icon: Palmtree,
       },
       {
         label: 'Showcases',
-        href: '/dashboard/admin/contact-center/showcases',
+        href: '/dashboard/admin/content-manager/showcases',
         icon: MapPinned,
       },
     ],
   },
   {
-    title: 'Logistics',
+    title: 'Operations',
     items: [
-      { label: 'Tour Catalog', href: '/dashboard/admin/tours', icon: Map },
       {
-        label: 'Bookings Hub',
-        href: '/dashboard/admin/bookings',
+        label: 'Manage Tours',
+        href: '/dashboard/admin/operations/tours',
+        icon: Map,
+      },
+      {
+        label: 'Reservations Hub',
+        href: '/dashboard/admin/operations/reservations',
         icon: Calendar,
       },
       {
-        label: 'Financials',
-        href: '/dashboard/admin/payments',
+        label: 'Payments Hub',
+        href: '/dashboard/admin/operations/payments',
         icon: CreditCard,
       },
     ],
@@ -245,15 +250,24 @@ const adminNav = [
   {
     title: 'User Management',
     items: [
-      { label: 'Customer Base', href: '/dashboard/admin/users', icon: Users },
+      {
+        label: 'Customer Base',
+        href: '/dashboard/admin/user-management/users',
+        icon: Users,
+      },
     ],
   },
   {
-    title: 'Support',
+    title: 'Community Center',
     items: [
       {
-        label: 'Inquiry Center',
-        href: '/dashboard/admin/messages',
+        label: 'Public Stories',
+        href: '/dashboard/admin/community-center/reviews',
+        icon: Sparkles,
+      },
+      {
+        label: 'Direct Messages',
+        href: '/dashboard/admin/community-center/inquiries',
         icon: MessageSquare,
       },
     ],
