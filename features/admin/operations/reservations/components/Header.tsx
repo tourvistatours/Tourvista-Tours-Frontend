@@ -50,6 +50,7 @@ export default function ReservationHeader({ stats, isLoading }: Props) {
             highlight="Hub"
             subtitle="Oversee the complete booking lifecycle. Filter reservations by status type, perform instant cancellations, and manage guest transitions through real-time status updates."
             icon={Calendar}
+            variant="blue"
           />
         </div>
 
